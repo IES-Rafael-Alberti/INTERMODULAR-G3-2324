@@ -1,3 +1,15 @@
+# Índice
+
+- [Introducción](#introducción)
+- [Políticas de seguridad generales](#políticas-de-seguridad-generales)
+    - [Políticas de contraseñas](#políticas-de-contraseñas)
+    - [Política de uso de VPN](#política-de-uso-de-vpn)
+    - [Política de configuración de VPN](#política-de-configuración-de-vpn)
+    - [Política de Correo Eletrónico](#políticas-de-correo-electrónico)
+    - [Política de dispositivos de la empresa](#políticas-de-dispositivos-empresa)
+    - [Política de tarjetas de identificación](#políticas-de-tarjetas-de-identficación)
+    - [Política de autenticación biométrica de huella dactilar](#política-de-identificación-de-huella-dactilar)
+
 # Introducción
 
 Este documento establece las políticas de seguridad que nuestra empresa ha implementado para proteger sus activos digitales y físicos. Estas políticas son obligatorias para todos los empleados y colaboradores de la empresa.
