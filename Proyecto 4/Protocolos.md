@@ -105,3 +105,41 @@ Los protocolos relacionados con los lectores de huellas dactilares se centran en
 3. **Solitud de clave pública:** El equipo de IT le proporcionará al empleado la clave pública necesaria para conectarse al sistema Wireguard.
 
 4. **Configuración del software Wireguard:** En el dispositivo adicional se realizará la configuración necesaria para conectarse a la empresa de forma remota. Esto incluirá añadir la clave pública recibida.
+
+## Software e Infraestructura necesarios
+
+### Códigos OTP
+
+- **Proveedor de servicios de SMS:** Se necesitaría un proveedor de servicios de SMS que permita el envío de mensajes de texto a través de una API o una plataforma en la nube. 
+
+- **Plataforma de autentificación:** También se requeriría una plataforma de autentificación que pueda generar códigos OTP y enviarlos a través del proveedor de servicios de SMS. Esta plataforma puede ser desarrollada internamente o adquirida como un servicio externo. Ejemplos de plataformas de autenticación incluyen Authy, Google Authenticator, y soluciones de autenticación multifactor basadas en la nube.
+
+- **Base de datos de usuarios:** Finalmente, se necesita una base de datos de usuarios donde almacenar los números de teléfono móvil de los empleados o usuarios autorizados.
+
+### Tarjetas de identificación
+
+- **Software de Control de Acceso:** Este software se utiliza para controlar el acceso físico a las instalaciones de la empresa. Permite configurar políticas de acceso, gestionar lectores de tarjetas y registrar eventos de acceso.
+
+- **Lectores de Tarjetas:** Se necesitarían lectores de tarjetas instalados en los puntos de acceso físico para leer las tarjetas de identificación de los empleados.
+
+- **Base de Datos de Empleados:** Es importante disponer de una base de datos centralizada que almacene la información de los empleados, incluidos sus nombres, números de identificación únicos y otros datos relevantes. 
+
+### Lectores de huellas dactilares
+
+- **Lectores de Huellas Dactilares:** Sería necesario instalar los propios lectores de huellas dactilares en los puntos de acceso físico a zonas cruciales de la empresa, como la sala de servidores. 
+
+- **Software de Reconocimiento de Huellas Dactilares:** Se requiere de software especializado que sea capaz de capturar, almacenar y verificar las huellas dactilares de los empleados. Este software debe ser capaz de comparar la huella dactilar escaneada con las huellas almacenadas en una base de datos y determinar si hay una coincidencia.
+
+- **Sistema de Gestión de Huellas Dactilares:** Se necesita un sistema para gestionar las huellas dactilares de los empleados, incluida su captura, almacenamiento y administración. Este sistema también podría permitir la asociación de las huellas dactilares con otros datos de identificación del empleado, como nombres, números de identificación, etc, centralizando todos los datos en una sola base de datos.
+
+- **Base de Datos de Huellas Dactilares:** Una base de datos centralizada donde almacenar las huellas dactilares de los empleados de manera segura y protegida. Esta base de datos se utilizaría para comparar las huellas dactilares escaneadas con las huellas almacenadas durante el proceso de verificación, además de para almacenar otros datos de los empleados.
+
+### Wireguard
+
+- **Servidores WireGuard:** Es necesario configurar servidores WireGuard para facilitar la conectividad entre las redes de la empresa. Estos servidores actuarán como puntos de entrada y salida para el tráfico VPN. 
+
+- **Clientes WireGuard:** Los clientes WireGuard son las aplicaciones instaladas en los dispositivos de los usuarios para permitir la conexión a la red VPN. Estos clientes deben ser compatibles con el sistema operativo de los dispositivos y se encargarán de establecer y gestionar la conexión VPN.
+
+- **Configuración del Túnel VPN:** Deberás configurar y gestionar los túneles VPN utilizando la infraestructura de WireGuard. Esto incluirá la generación de claves públicas y privadas, así como la configuración de las interfaces de red en los servidores y clientes WireGuard.
+
+- **Gestión de Claves Públicas y Privadas:** WireGuard utiliza pares de claves asimétricas (pública y privada) para establecer conexiones seguras. Necesitarás gestionar y almacenar de forma segura estas claves para cada servidor y cliente WireGuard.
